@@ -17,6 +17,10 @@ async function main() {
       origin: "http://localhost:5173",
     })
   );
+
+  const bookRoutes = require("./routes/book.route");
+  app.use("/api/book", bookRoutes);
+
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
   });
